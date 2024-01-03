@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pagina de tareas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .confirmation-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .confirmation-modal p {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .confirmation-modal button {
+            background-color: #f702ea;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="classnuevo">Lista de tareas</div>
+    <div class="container">
+        <div id="newtask">
+            <input type="text" placeholder="Añade tareas para realizar..">
+            <button id="push">Añadir</button>
+        </div>
+        <div id="tasks"></div>
+    </div>
+
+    <div class="confirmation-modal" id="confirmationModal">
+        <p>¿Estás seguro(a) de eliminar esta tarea?</p>
+        <button id="confirmButton">Confirmar</button>
+        <button id="cancelButton">Cancelar</button>
+    </div>
+
+    <script src="code.js"></script>
+</body>
+</html>
